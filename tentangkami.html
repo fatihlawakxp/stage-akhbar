@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <audio id="xpSound" src="xp-error.wav" preload="auto"></audio>
+
+<script>
+  function playXpError() {
+    const audio = document.getElementById('xpSound');
+    audio.currentTime = 0;
+    audio.play();
+  }
+
+  // Cari pautan dan tambah fungsi mainkan bunyi
+  document.addEventListener('DOMContentLoaded', function () {
+    const xpLinks = document.querySelectorAll('.navbar a');
+    xpLinks.forEach(link => {
+      link.addEventListener('click', playXpError);
+    });
+  });
+</script>
   <meta charset="UTF-8">
   <title>Tentang Kami - Stage Akhbar</title>
   <link rel="stylesheet" href="style.css">

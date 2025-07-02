@@ -5,6 +5,23 @@
   <title>Stage Akhbar</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico" type="image/png">
+  <audio id="xpSound" src="xp-error.wav" preload="auto"></audio>
+
+<script>
+  function playXpError() {
+    const audio = document.getElementById('xpSound');
+    audio.currentTime = 0;
+    audio.play();
+  }
+
+  // Cari pautan dan tambah fungsi mainkan bunyi
+  document.addEventListener('DOMContentLoaded', function () {
+    const xpLinks = document.querySelectorAll('.navbar a');
+    xpLinks.forEach(link => {
+      link.addEventListener('click', playXpError);
+    });
+  });
+</script>
 </head>
 <body>
 
