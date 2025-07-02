@@ -32,3 +32,4 @@ const filer = document.querySelectorAll(".fileopener");
 filer.forEach((f) => {
   f.onclick = () => { goto(f.dataset.file, f.dataset.line); };
 });
+alert("Selamat datang ke Stage Akhbar! Jangan percaya apa-apa ya 😆");
